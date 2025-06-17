@@ -8,10 +8,11 @@ public class PsuedoElementHandle {
 	public static void main(String[] args) {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
-		
+
+
 		/*
-		 * String script=
-		 * "return window.getComputedStyle(document.querySelector(\"label[for='input-firstname']\"),'::before').getPropertyValue('content');"
+		 * String
+		 * script="return window.getComputedStyle(document.querySelector(\"label[for='input-firstname']\"),'::before').getPropertyValue('content');"
 		 * ;
 		 * 
 		 * JavascriptExecutor js= (JavascriptExecutor)driver;
@@ -20,6 +21,8 @@ public class PsuedoElementHandle {
 		 * System.out.println(mand_text); if(mand_text.contains("*")) {
 		 * System.out.println("The firstName is mandetory field"); }
 		 */
-		
+		JavaScriptUtil js=new JavaScriptUtil(driver);
+		js.psuedoElementHandle("input-lastname", "Last Name");
+
 	}
 }
